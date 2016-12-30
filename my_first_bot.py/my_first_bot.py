@@ -1,4 +1,4 @@
-import os 
+﻿import os 
 from markovbot import MarkovBot
 
 # Initialise a MarkovBot instance
@@ -7,32 +7,32 @@ tweetbot = MarkovBot()
 # Get the current directory's path
 dirname = os.path.dirname(os.path.abspath(__file__))
 # Construct the path to the book
-book = os.path.join(dirname, 'Freud_Dream_Psychology.txt')
+book = os.path.join(dirname, 'Alex_Data.txt')
 # Make your bot read the book!
 tweetbot.read(book)
 
-my_first_text = tweetbot.generate_text(5, seedword=['I', 'sass'])
+my_first_text = tweetbot.generate_text(5, seedword=['I', 'alive'])
 print("tweetbot says:")
 print(my_first_text)
 
 # ALL YOUR SECRET STUFF!
 # Consumer Key (API Key)
-cons_key = 'WnnlPi8m01yhrR6xM5jgDPY2u'
+cons_key = 'RziMTIlFG2BDopROcYFyJNRxx'
 # Consumer Secret (API Secret)
-cons_secret = '0g7ChS7wKBAEpyoj4Q9jVRuAgi7kCY7ux0FLSHS8oRriPYKl7R'
+cons_secret = 'wFeEpLSQEJ3Ub628UIB3W04jRqjKiGIgCxTF1LXBLeFCkWQ9xD'
 # Access Token
-access_token = '1852893697-YKvNV0LZGMgPf05kOkz4NbY80ZGmxZxRx7QHwjf'
+access_token = '814680840869322752-1oTZZzkHoBb3qfaFTxuraZ4ohRsFith'
 # Access Token Secret
-access_token_secret = '4ClpZRSFmRLHwRoccfn4mhBcxxImTM1fyryFMDLszHAu3'
+access_token_secret = '2bYfrjaDq9fFNzNSxZbF6MNVRWtNJ45e9bA14yXrziil5'
 
 # Log in to Twitter
 tweetbot.twitter_login(cons_key, cons_secret, access_token, access_token_secret)
 
 # Set some parameters for your bot
-targetstring = 'MarryMeFreud'
-keywords = ['marriage', 'ring', 'flowers', 'children', 'religion']
+targetstring = 'AlexBotLives'
+keywords = ['hello', 'kill', 'food', 'star wars', 'etsy']
 prefix = None
-suffix = '#FreudSaysIDo'
+suffix = '#AlexBot'
 maxconvdepth = 2
 
 # Start auto-responding to tweets
@@ -48,3 +48,5 @@ tweetbot.twitter_tweeting_start(days=0, hours=0, minutes=5, keywords=None, prefi
 # Use the following to stop periodically tweeting
 # (Don't do this directly after starting it, or your bot will do nothing!)
 # tweetbot.twitter_tweeting_stop()
+
+raw_input("\nPress enter to continue \n")
